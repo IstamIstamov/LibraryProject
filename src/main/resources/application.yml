@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  security:
+    user:
+      name: USER
+      password: root
+      roles: ADMIN
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 100MB
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+server:
+  tomcat:
+    max-swallow-size: 100MB
+  port: 8080
+
+secret:
+  key: sdfrsggfhrasufhrausvhuerhgvuahzsfvuabzrwvuiafbvzfiszdkjbdcsf
